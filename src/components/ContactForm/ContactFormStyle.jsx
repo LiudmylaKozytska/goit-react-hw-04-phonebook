@@ -1,50 +1,64 @@
 import styled from '@emotion/styled';
 
-export const Form = styled.form`
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 500px;
-  padding: 60px;
-  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+export const TabletContainer = styled.div`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
 `;
 
 export const Title = styled.h2`
-  font-size: 32px;
-  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  color: #0d161b;
   margin-bottom: 24px;
-  background: #121fcf;
-  background: linear-gradient(to right, #121fcf 0%, #cf1512 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 `;
 
 export const Input = styled.input`
-  margin: 12px;
-  width: 350px;
-  font-size: 20px;
-  border-radius: 10px;
-  padding: 10px 15px;
-  color: #121fcf;
-  border: 1px solid #ffd1d1;
-  background-color: #f9fcff;
+  font-size: 18px;
+  padding: 4px 4px 4px 30px;
+  border: none;
+  border-bottom: 1px solid #c4c4c4;
+  background-color: transparent;
 `;
 
 export const Button = styled.button`
   cursor: pointer;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #f9fcff;
-  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0d161b;
+  margin: 8px;
   padding: 12px 40px;
-  border-radius: 10px;
-  border: none;
-  background-color: #ff3cac;
-  background-image: linear-gradient(
-    225deg,
-    #ff3cac 0%,
-    #784ba0 50%,
-    #2b86c5 100%
-  );
+  border: 1.5px solid #86969b;
+  border-radius: 8px;
+  background-color: transparent;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: #a6f309;
+    border: 1.5px solid #dedede;
+  }
+`;
+
+export const Label = styled.label`
+  position: relative;
+  display: block;
+  max-width: 280px;
+
+  margin: 8px auto;
+
+  @media screen and (min-width: 768px) {
+    margin: 6px;
+  }
+`;
+
+export const FormIcon = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translate(-50%, -50%);
 `;
